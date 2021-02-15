@@ -1,38 +1,208 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.outer-container {
+  display: flex;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
 }
+.header {
+  display: flex;
+  padding: 0 10%;
+  height: 10vh;
+  width: 100%;
+  background-color: rgb(27, 109, 216);
+  color: White;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  justify-content: space-between;
+  align-items: center;
+}
+.home-container {
+  display: flex;
+  width: 100vw;
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
+}
+.signin-card {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px;
+  height: 70%;
+  color: white;
+
+  background-color: lavender;
+  padding: 10%;
+  border-radius: 50px;
+  box-shadow: 10px 10px 20px grey;
+}
+.signin-header {
+  background-color: rgb(27, 109, 216);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 20%;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.signin-body {
+  width: 100%;
+  height: 80%;
+  color: black;
+  font-weight: bold;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.signin-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 30px;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 10px, 10px, 10px rgb(12, 61, 124);
+  background-color: rgb(27, 109, 216);
+  box-shadow: 3px 3px 5px rgb(12, 61, 124);
+  margin-top: 10%;
+}
+.signin-button:hover {
+  cursor: pointer;
+  transform: scale(0.95);
+}
+.chatbox-container {
+  width: 100%;
+
+  height: 90vh;
+  display: flex;
+}
+
+.ChatArea-container {
+  width: 100%;
+  height: 100%;
+  background-color: lavender;
+}
+.messageArea {
+  width: 100%;
+  height: 90%;
+  overflow-y: scroll;
+}
+.send-container {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.send-container input {
+  width: 90%;
+  height: 100%;
+  border-radius: 5px;
+  border-color: transparent;
+  padding: 1%;
+}
+.sendButton {
+  width: 8%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: rgb(27, 109, 216);
+  color: white;
+  border: transparent;
+}
+.sendButton:hover {
+  background-color: rgb(21, 87, 173);
+}
+.member-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  background-color: red;
+  height: 100%;
+}
+.member-header {
+  height: 10%;
+  width: 100%;
+  background-color: rgb(21, 87, 173);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.member-body {
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+}
+.member-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 6%;
+  width: 100%;
+  background-color: rgb(27, 109, 216);
+  color: white;
+
+  margin-top: 5px;
+  padding-right: 0px;
+}
+.close-chat {
+  width: 100%;
+  height: 5%;
+  background-color: rgb(27, 109, 216);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.self {
+  padding: 1%;
+  text-align: right;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.other {
+  padding: 1%;
+  text-align: left;
+}
+.self span,
+.other span {
+  background-color: white;
+  padding: 0.4%;
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px gray;
+}
+.card-button {
+  background-color: white;
+  color: rgb(27, 109, 216);
+  padding: 0px 5px;
+  margin-left: 3px;
+  border-collapse: collapse;
+  border-radius: 5px;
+  height: 100%;
+  cursor: pointer;
+}
+.logout {
+  border: none;
+  border-radius: 5px;
+  padding: 0 4px;
+  background-color: rgb(12, 61, 124);
+  color: white;
+  cursor: pointer;
+}
+.logout:hover {
+  transform: scale(0.95);
+}
+.card-button:hover {
+  transform: scale(0.95);
 }
